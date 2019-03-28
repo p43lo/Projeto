@@ -123,151 +123,12 @@
         <div id="BtDisplay">
             
         </div>
-        <script>
-
-            $(document).ready(function () {
-       
-      
-                if ((g_iCount1 + 1) <= valor1) {
-                    g_iCount1 = g_iCount1 + 1;
-                    numberCountdown1.innerText = '' + g_iCount1;
-                    setTimeout('startCountdown1()', 0);
-                }
-        
-
-                if ((g_iCount2 + 1) <= valor2) {
-                    g_iCount2 = g_iCount2 + 1;
-                    numberCountdown2.innerText = '00' + g_iCount2;
-                    setTimeout('startCountdown2()', 0);
-                };
-    
-                if ((g_iCount3 + 1) <= valor3) {
-                    g_iCount3 = g_iCount3 + 1;
-                    numberCountdown3.innerText = '00' + g_iCount3;
-                    setTimeout('startCountdown3()', 0);
-                };
-
-                if ((g_iCount4 + 1) <= valor4) {
-                    g_iCount4 = g_iCount4 + 1;
-                    numberCountdown4.innerText = '00' + g_iCount4;
-                    setTimeout('startCountdown4()', 0);
-                };
-
-                if ((g_iCount5 + 1) <= valor5) {
-                    g_iCount5 = g_iCount5 + 1;
-                    numberCountdown5.innerText = '00' + g_iCount5;
-                    setTimeout('startCountdown5()', 0);
-                };
-
-    
-                if ((g_iCount6 + 1) <= valor6) {
-                    g_iCount6 = g_iCount6 + 1;
-                    numberCountdown6.innerText = '00' + g_iCount6;
-                    setTimeout('startCountdown6()', 0);
-                };
-
-                if ((g_iCount7 + 1) <= valor7) {
-                    g_iCount7 = g_iCount7 + 1;
-                    numberCountdown7.innerText = '00' + g_iCount7;
-                    setTimeout('startCountdown7()', 0);
-                };
-
-        
-                if ((g_iCount8 + 1) <= valor8) {
-                    g_iCount8 = g_iCount8 + 5;
-                    numberCountdown8.innerText = '00' + g_iCount8;
-                    setTimeout('startCountdown8()', 0);
-                };
-
-                // $('#btns').fadeOut('fast');
-                //   $('#').fadeOut('fast');        
-                //   $('#minhadiv').fadeIn('slow');
-
-                //funcao para popap
-                $("#btns3").click(function () {
-                    $('.popover').toggle(250);
-                })
-
-
-                //funcao evento click elemento
-                $('#btns').click(function () {
-                    var div = document.getElementById('btns');
-
-                    // Altera várias propriedades de CSS do elemento
-                    div.style.width = '0px';
-                    div.style.height = '0px';
-
-                    var div = document.getElementById('btns2');
-
-                    // Altera várias propriedades de CSS do elemento
-                    div.style.width = '25px';
-                    div.style.height = '35px';
-                });
-
-                $('#DataList1').fadeOut('fast');                   
-                $('#DataList1').fadeIn('slow');
-                /*  $('#D-nt1').fadeOut('fast');                   
-                  $('#D-nt1').fadeIn('slow');
-                  $('#D-nt2').fadeOut('fast');                   
-                  $('#D-nt2').fadeIn('slow');
-                  $('#D-nt3').fadeOut('fast');                   
-                  $('#D-nt3').fadeIn('slow');
-                  $('#D-nt4').fadeOut('fast');                   
-                  $('#D-nt4').fadeIn('slow');
-                  $('#D-nt5').fadeOut('fast');                   
-                  $('#D-nt5').fadeIn('slow');
-                  $('#D-nt6').fadeOut('fast');                   
-                  $('#D-nt6').fadeIn('slow');
-                  */
-        
-
-                $('#btns2').click(function () {
-
-
-                    //funcao esconder a imagem
-                    var div = document.getElementById('btns2');
-
-                    // Altera várias propriedades de CSS do elemento
-                    div.style.width = '0px';
-                    div.style.height = '0px';
-
-                    var div = document.getElementById('btns');
-
-                    // Altera várias propriedades de CSS do elemento
-                    div.style.width = '25px';
-                    div.style.height = '35px';
-
-
-                });
-
-
-                $('#btSiaAc').click(function () {
-                    $('#D-SiaAc').fadeIn('slow');
-                    $('#D-SiaMc').fadeOut('slow');
-                    $('#D-SihMc').fadeOut('slow');
-                    $('#D-SihAc').fadeOut('fast');
-                });
-
-
-
-
-
-            });
-            function SIA_MCup() {
-                document.images["btSiaMc"].src = "../Imagens/botao/SIA-MC2.png";
-            }
-            function SIA_MCdown() {
-                document.images["btSiaMc"].src = "../Imagens/botao/SIA-MC.png";
-            }
-
-
-
-        </script>
+ 
 
 
         <!-- page content -->
         <div class="right_col" role="main">
-            <div class="" style="background-color: #;">
+            <div class="">
 
                 <div id="Contagem1" style="background-color: #2a3f54;">
 
@@ -297,7 +158,12 @@
                             </div>
                             <div class="x_content">
 
-                                
+                                <div id="canvas-holder" style="width:40%">
+                                    <canvas id="chart-area"></canvas>
+                                </div>
+                                <button id="randomizeData">Randomize Data</button>
+                                <button id="addDataset">Add Dataset</button>
+                                <button id="removeDataset">Remove Dataset</button>
 
                             </div>
                         </div>
