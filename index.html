@@ -2,14 +2,334 @@
 <script src="utils.js"></script>
 <script src="Chart.min.js"></script>
 
+<!-- Bootstrap -->
+<link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Font Awesome -->
+<link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!-- NProgress -->
+<link href="vendors/nprogress/nprogress.css" rel="stylesheet" />
+<!-- bootstrap-progressbar -->
+<link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" />
+<!-- bootstrap-daterangepicker -->
+<link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+
+<!-- Custom Theme Style -->
+<link href="build/css/custom.min.css" rel="stylesheet" />
+
+
 <h1>Bem vindo</h1>
 
-<div id="canvas-holder" style="width:40%">
-    <canvas id="chart-area"></canvas>
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="#" class="site_title">
+                      
+                        <span>PORTAL</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_pic">
+                      
+
+                    </div>
+                    <div class="profile_info">
+                        <span>Bem Vindo,</span>
+                        <h2>
+                           
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br />
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3></h3>
+                        <ul class="nav side-menu">
+                            <li><a href=""><i class="fa fa-home"></i>Home </a>
+
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+                <div class="sidebar-footer hidden-small">
+                    <a data-toggle="tooltip" data-placement="top" title="Settings">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Lock">
+                        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                    </a>
+                    <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    </a>
+                </div>
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+        <div style="display: none; height: 50px;" id="minhadiv">
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu" style="height: 30px">
+                    <nav>
+                        <div class="nav toggle" style="height: 30px">
+                            <a id="menu_toggle" style="height: 30px"><i class="fa fa-bars" style="height: 30px"></i></a>
+                        </div>
+
+                       
+
+
+                        <ul class="nav navbar-nav navbar-right" style="height: 30px">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="javascript:;">Perfil</a></li>
+                                    <li>
+                                        <a href="">
+
+                                            <span>Config</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="javascript:;">Ajuda</a></li>
+                                    <li><a href=""><i class="fa fa-sign-out pull-right"></i>Sair</a></li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+        </div>
+        <div id="BtDisplay">
+            
+        </div>
+        <script>
+
+            $(document).ready(function () {
+       
+      
+                if ((g_iCount1 + 1) <= valor1) {
+                    g_iCount1 = g_iCount1 + 1;
+                    numberCountdown1.innerText = '' + g_iCount1;
+                    setTimeout('startCountdown1()', 0);
+                }
+        
+
+                if ((g_iCount2 + 1) <= valor2) {
+                    g_iCount2 = g_iCount2 + 1;
+                    numberCountdown2.innerText = '00' + g_iCount2;
+                    setTimeout('startCountdown2()', 0);
+                };
+    
+                if ((g_iCount3 + 1) <= valor3) {
+                    g_iCount3 = g_iCount3 + 1;
+                    numberCountdown3.innerText = '00' + g_iCount3;
+                    setTimeout('startCountdown3()', 0);
+                };
+
+                if ((g_iCount4 + 1) <= valor4) {
+                    g_iCount4 = g_iCount4 + 1;
+                    numberCountdown4.innerText = '00' + g_iCount4;
+                    setTimeout('startCountdown4()', 0);
+                };
+
+                if ((g_iCount5 + 1) <= valor5) {
+                    g_iCount5 = g_iCount5 + 1;
+                    numberCountdown5.innerText = '00' + g_iCount5;
+                    setTimeout('startCountdown5()', 0);
+                };
+
+    
+                if ((g_iCount6 + 1) <= valor6) {
+                    g_iCount6 = g_iCount6 + 1;
+                    numberCountdown6.innerText = '00' + g_iCount6;
+                    setTimeout('startCountdown6()', 0);
+                };
+
+                if ((g_iCount7 + 1) <= valor7) {
+                    g_iCount7 = g_iCount7 + 1;
+                    numberCountdown7.innerText = '00' + g_iCount7;
+                    setTimeout('startCountdown7()', 0);
+                };
+
+        
+                if ((g_iCount8 + 1) <= valor8) {
+                    g_iCount8 = g_iCount8 + 5;
+                    numberCountdown8.innerText = '00' + g_iCount8;
+                    setTimeout('startCountdown8()', 0);
+                };
+
+                // $('#btns').fadeOut('fast');
+                //   $('#').fadeOut('fast');        
+                //   $('#minhadiv').fadeIn('slow');
+
+                //funcao para popap
+                $("#btns3").click(function () {
+                    $('.popover').toggle(250);
+                })
+
+
+                //funcao evento click elemento
+                $('#btns').click(function () {
+                    var div = document.getElementById('btns');
+
+                    // Altera várias propriedades de CSS do elemento
+                    div.style.width = '0px';
+                    div.style.height = '0px';
+
+                    var div = document.getElementById('btns2');
+
+                    // Altera várias propriedades de CSS do elemento
+                    div.style.width = '25px';
+                    div.style.height = '35px';
+                });
+
+                $('#DataList1').fadeOut('fast');                   
+                $('#DataList1').fadeIn('slow');
+                /*  $('#D-nt1').fadeOut('fast');                   
+                  $('#D-nt1').fadeIn('slow');
+                  $('#D-nt2').fadeOut('fast');                   
+                  $('#D-nt2').fadeIn('slow');
+                  $('#D-nt3').fadeOut('fast');                   
+                  $('#D-nt3').fadeIn('slow');
+                  $('#D-nt4').fadeOut('fast');                   
+                  $('#D-nt4').fadeIn('slow');
+                  $('#D-nt5').fadeOut('fast');                   
+                  $('#D-nt5').fadeIn('slow');
+                  $('#D-nt6').fadeOut('fast');                   
+                  $('#D-nt6').fadeIn('slow');
+                  */
+        
+
+                $('#btns2').click(function () {
+
+
+                    //funcao esconder a imagem
+                    var div = document.getElementById('btns2');
+
+                    // Altera várias propriedades de CSS do elemento
+                    div.style.width = '0px';
+                    div.style.height = '0px';
+
+                    var div = document.getElementById('btns');
+
+                    // Altera várias propriedades de CSS do elemento
+                    div.style.width = '25px';
+                    div.style.height = '35px';
+
+
+                });
+
+
+                $('#btSiaAc').click(function () {
+                    $('#D-SiaAc').fadeIn('slow');
+                    $('#D-SiaMc').fadeOut('slow');
+                    $('#D-SihMc').fadeOut('slow');
+                    $('#D-SihAc').fadeOut('fast');
+                });
+
+
+
+
+
+            });
+            function SIA_MCup() {
+                document.images["btSiaMc"].src = "../Imagens/botao/SIA-MC2.png";
+            }
+            function SIA_MCdown() {
+                document.images["btSiaMc"].src = "../Imagens/botao/SIA-MC.png";
+            }
+
+
+
+        </script>
+
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="" style="background-color: #;">
+
+                <div id="Contagem1" style="background-color: #2a3f54;">
+
+                  
+
+                </div>
+
+
+
+                <br />
+
+                <div class="row">
+                    <div class="col-md-4 col-md-6 col-xs-12 widget_tally_box">
+                        <div class="x_panel" style="background-color: #2a3f54">
+                            <div class="x_title" style="color: #000000;">
+                                <h2>Censo Atual</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-8 col-sm-9 col-xs-9">
+                        <div class="dashboard_graph x_panel" style="background-color: #ffffff; color: #000000;">
+                            <!-- <div class="dashboard_graph x_panel" style="background-color:#dce4ea"> -->
+                            <div class="row x_title">
+                                <div class="col-md-6">
+                                    <h3>Internacoes<small>.</small></h3>
+                                </div>
+
+                            </div>
+                            <div class="x_content">
+
+                                
+                            </div>
+                        </div>
+                    </div>                  
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
-<button id="randomizeData">Randomize Data</button>
-<button id="addDataset">Add Dataset</button>
-<button id="removeDataset">Remove Dataset</button>
+
 
 <script>
     var randomScalingFactor = function() {
@@ -90,4 +410,45 @@
     });
 </script>
 
+
+   <!-- jQuery -->
+   <script src="vendors/jquery/dist/jquery.min.js"></script>
+   <!-- Bootstrap -->
+   <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+   <!-- FastClick -->
+   <script src="vendors/fastclick/lib/fastclick.js"></script>
+   <!-- NProgress -->
+   <script src="vendors/nprogress/nprogress.js"></script>
+   <!-- Chart.js -->
+   <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+   <!-- jQuery Sparklines -->
+   <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+   <!-- morris.js -->
+   <script src="vendors/raphael/raphael.min.js"></script>
+   <script src="vendors/morris.js/morris.min.js"></script>
+   <!-- gauge.js -->
+   <script src="vendors/gauge.js/dist/gauge.min.js"></script>
+   <!-- bootstrap-progressbar -->
+   <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+   <!-- Skycons -->
+   <script src="vendors/skycons/skycons.js"></script>
+   <!-- Flot -->
+   <script src="vendors/Flot/jquery.flot.js"></script>
+   <script src="vendors/Flot/jquery.flot.pie.js"></script>
+   <script src="vendors/Flot/jquery.flot.time.js"></script>
+   <script src="vendors/Flot/jquery.flot.stack.js"></script>
+   <script src="vendors/Flot/jquery.flot.resize.js"></script>
+   <!-- Flot plugins -->
+   <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+   <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+   <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+   <!-- DateJS -->
+   <script src="vendors/DateJS/build/date.js"></script>
+   <!-- bootstrap-daterangepicker -->
+   <script src="vendors/moment/min/moment.min.js"></script>
+   <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+   <!--PARA GRAFICO DO CIRUCULO -->
+   <!-- easy-pie-chart -->
+   <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
 
